@@ -5,12 +5,12 @@
 class WorldCup2026CliDashboard < Formula
   desc "Watch live World Cup 2026 matches in your terminal"
   homepage "https://github.com/mansueli/world-cup-2026-cli-dashboard"
-  version "0.3.6"
+  version "0.3.7"
   license "MIT"
 
   on_macos do
-    url "https://github.com/mansueli/world-cup-2026-cli-dashboard/releases/download/v0.3.6/world-cup-2026-cli-dashboard_0.3.6_darwin_all.tar.gz"
-    sha256 "00223950a453a1ed2a2a4a6ad1b729307a12b9fce5f983971c7c2ba364707377"
+    url "https://github.com/mansueli/world-cup-2026-cli-dashboard/releases/download/v0.3.7/world-cup-2026-cli-dashboard_0.3.7_darwin_all.tar.gz"
+    sha256 "d8cef10ab84f1327ac3d52b0ed2eddd96040d78cc67c224500b6d14bc2d6b96b"
 
     define_method(:install) do
       bin.install "world-cup-2026-cli-dashboard"
@@ -19,15 +19,15 @@ class WorldCup2026CliDashboard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mansueli/world-cup-2026-cli-dashboard/releases/download/v0.3.6/world-cup-2026-cli-dashboard_0.3.6_linux_amd64.tar.gz"
-      sha256 "e3549cf7bfb60d4380379f12a3a3d38d4d7052a3e99baf288ac3561d1df2b507"
+      url "https://github.com/mansueli/world-cup-2026-cli-dashboard/releases/download/v0.3.7/world-cup-2026-cli-dashboard_0.3.7_linux_amd64.tar.gz"
+      sha256 "a69a525464adda111b6644ae4d9f06f36bfc63e5653f320fbe6f15a83fab3b54"
       define_method(:install) do
         bin.install "world-cup-2026-cli-dashboard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mansueli/world-cup-2026-cli-dashboard/releases/download/v0.3.6/world-cup-2026-cli-dashboard_0.3.6_linux_arm64.tar.gz"
-      sha256 "fcfc679b3e8a405433f2e67949ec4057ebc287df7f67799bc4ad3132ea1d783b"
+      url "https://github.com/mansueli/world-cup-2026-cli-dashboard/releases/download/v0.3.7/world-cup-2026-cli-dashboard_0.3.7_linux_arm64.tar.gz"
+      sha256 "00376b0b1c6a07a4553e4d590dc38bed06d955c6dd7a75c237320cbc503d8e29"
       define_method(:install) do
         bin.install "world-cup-2026-cli-dashboard"
       end
