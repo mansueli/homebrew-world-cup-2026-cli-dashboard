@@ -1,0 +1,27 @@
+name: Auto-merge Homebrew Formula
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "Formula/world-cup-2026-cli-dashboard.rb"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    if: startsWith(github.head_ref, 'release/')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Auto-merge release PRs
+        uses: pascalgn/automerge-action@v0.16.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_METHOD: squash
+          MERGE_COMMIT_MESSAGE: "chore: auto-merge Homebrew formula update"
